@@ -1,4 +1,7 @@
 import tkinter
+
+################################## Setting up App window ############################
+
 window = tkinter.Tk()
 window.title("Mile to Kilometer Converter")
 window.minsize(width=200, height=100)
@@ -12,18 +15,21 @@ input_text.grid(column=1, row=0)
 label2 = tkinter.Label(text=0)
 label2.grid(column=1, row=1)
 
+####################### Functionality of Calculate Button ########################
+
 
 def click():
-    result =round(float(input_text.get()) * 1.60934)
+    result = round(float(input_text.get()) * 1.60934)
     label2.config(text=result)
 
 
 button = tkinter.Button(text="Calculate", command=click)
-button.grid(column=1, row=2)
 
+############################## Layout of the Fields and Buttons ###########################
+
+button.grid(column=1, row=2)
 label3 = tkinter.Label(text="Miles")
 label3.grid(column=2, row=0)
-
 label4 = tkinter.Label(text="Km")
 label4.grid(column=2, row=1)
 window.mainloop()
